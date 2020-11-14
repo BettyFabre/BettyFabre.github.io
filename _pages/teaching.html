@@ -1,0 +1,15 @@
+---
+layout: archive
+title: "Teaching"
+permalink: /teaching/
+author_profile: true
+---
+
+{% include base_path %}
+
+{% for post in site.teaching reversed %}
+	<h2 class="archive__item-title">{{ post.title }}</h2>
+	<i> {{post.type}}, {{post.venue}}, {{ post.date | default: "1900-01-01" | date: "%Y" }} </i> <br>
+    {{post.excerpt}}
+	<hr>
+{% endfor %}
